@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+    <!--<item-->
+        <!--android:id="@+id/scan"-->
+        <!--android:icon="@drawable/ic_qr_code"-->
+        <!--android:title="Scan" />-->
+    <item
+        android:id="@+id/book"
+        android:icon="@drawable/ic_beach_access_black_24dp"
+        android:title="MyBookings" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_user"
+        android:title="MyProfile" />
+</menu>

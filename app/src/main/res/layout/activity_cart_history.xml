@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CartHistoryActivity">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/headerScroll"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="@dimen/cell_width"
+                    android:id="@+id/ordername"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/margin"
+                    android:text="Order Name"
+                    android:textAllCaps="true"
+                    android:gravity="center|start"
+                    android:textColor="@android:color/white"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin" />
+
+                <TextView
+                    android:layout_width="@dimen/cell_width"
+                    android:id="@+id/count"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/margin"
+                    android:text="Count"
+                    android:textAllCaps="true"
+                    android:gravity="center|start"
+                    android:textColor="@android:color/white"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin" />
+
+                <TextView
+                    android:layout_width="@dimen/cell_width"
+                    android:id="@+id/totalprice"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/margin"
+                    android:gravity="center|start"
+                    android:text="Total Price"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin" />
+
+                <TextView
+                    android:layout_width="@dimen/cell_width"
+                    android:id="@+id/cartemail"
+                    android:gravity="center|start"
+                    android:layout_marginStart="@dimen/margin"
+                    android:textStyle="bold"
+                    android:text="Email"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin" />
+
+                <!--<TextView-->
+                    <!--android:layout_width="@dimen/cell_width"-->
+                    <!--android:id="@+id/txtLeagueName"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginStart="@dimen/margin"-->
+                    <!--android:gravity="center|start"-->
+                    <!--android:text="Start_Time"-->
+                    <!--android:textAllCaps="true"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginLeft="@dimen/margin" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="@dimen/cell_width"-->
+                    <!--android:id="@+id/txtCoachName"-->
+                    <!--android:gravity="center|start"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginStart="@dimen/margin"-->
+                    <!--android:text="No Of Persons"-->
+                    <!--android:textAllCaps="true"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginLeft="@dimen/margin" />-->
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recycle3">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</LinearLayout>

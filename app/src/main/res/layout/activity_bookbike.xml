@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".Activity.BookbikeActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bike Rental"
+        android:textColor="@color/pink"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#EDEDED">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car"
+        android:layout_gravity="center"
+        android:textAlignment="center"/>
+    <ImageView
+        android:id="@+id/carimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+                <EditText
+                    android:id="@+id/bname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name on Driving License"
+                    android:textColorHint="@color/gray"/>
+                <EditText
+                    android:id="@+id/dno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Driving License No."
+                    android:textColorHint="@color/gray"/>
+
+                <EditText
+                    android:id="@+id/bmblno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Mobile No"
+                    android:textColorHint="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/bdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:hint="Today's Date"
+                    android:textColorHint="@color/gray"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/red"
+                     />
+
+                <Spinner
+                    android:id="@+id/bspn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Pickup"
+                    android:textColor="@color/red"
+                    android:spinnerMode="dropdown" />
+
+                <!--<Spinner-->
+                    <!--android:id="@+id/bspn2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginEnd="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:hint="Drop-Off"-->
+                    <!--android:textColorHint="@color/gray"-->
+                    <!--android:spinnerMode="dropdown" />-->
+
+                <Spinner
+                    android:id="@+id/bspn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="StartTime"
+
+                    android:textColorHint="@color/gray"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/bspn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="ReturnTime"
+                    android:spinnerMode="dropdown" />
+                <Button
+                    android:id="@+id/book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Now"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/shapeee"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

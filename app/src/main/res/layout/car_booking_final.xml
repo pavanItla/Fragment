@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:stretchColumns="1">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:hint="name"
+                />
+
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:hint="mobile_no"
+                />
+
+            <TextView
+                android:id="@+id/pick"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:hint="pickup"
+                />
+
+            <TextView
+                android:id="@+id/drop"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:hint="drop" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:hint="strt_tym" />
+
+            <TextView
+                android:id="@+id/persons"
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:hint="persons" />
+
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
