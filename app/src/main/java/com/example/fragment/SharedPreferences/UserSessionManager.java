@@ -31,7 +31,6 @@ public class UserSessionManager {
     //private static final String KEY_IS_WAITING_FOR_SMS = "IsWaitingForSms";
     private static final String KEY_ID="UserId";
     private static final String KEY_NAME = "name";
-
     private static final String KEY_EMAIL = "email";
     private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
     //private static final String KEY_PASSWORD = "password";

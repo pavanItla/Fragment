@@ -203,12 +203,14 @@ TextView totalprice;
 
 
                         tx2.setText("" + number1);
-                        Intent intent=new Intent(context,CartActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        context.startActivity(intent);
+
+//                        Intent intent=new Intent(context,CartActivity.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                        context.startActivity(intent);
 
 
 //                        id=modelFood.get().getPrice();
+
 
 
                     }

@@ -7,7 +7,7 @@ public class LoginResponse {
 
     /**
      * status : 1
-     * Data : [{"UserId":"44","name":"pavan","email":"pavanitla@gmail.com","password":"pavan itla","number":"8099553322"}]
+     * Data : [{"UserId":"84","email":"sai@gmail.com","name":"sai","number":"8978864570"}]
      */
 
     private int status;
@@ -31,17 +31,15 @@ public class LoginResponse {
 
     public static class DataBean {
         /**
-         * UserId : 44
-         * name : pavan
-         * email : pavanitla@gmail.com
-         * password : pavan itla
-         * number : 8099553322
+         * UserId : 84
+         * email : sai@gmail.com
+         * name : sai
+         * number : 8978864570
          */
 
         private String UserId;
-        private String name;
         private String email;
-        private String password;
+        private String name;
         private String number;
 
         public String getUserId() {
@@ -52,14 +50,6 @@ public class LoginResponse {
             this.UserId = UserId;
         }
 
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
         public String getEmail() {
             return email;
         }
@@ -68,12 +58,12 @@ public class LoginResponse {
             this.email = email;
         }
 
-        public String getPassword() {
-            return password;
+        public String getName() {
+            return name;
         }
 
-        public void setPassword(String password) {
-            this.password = password;
+        public void setName(String name) {
+            this.name = name;
         }
 
         public String getNumber() {

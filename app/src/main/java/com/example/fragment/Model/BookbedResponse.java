@@ -4,19 +4,19 @@ public class BookbedResponse {
 
 
     /**
-     * status : 1
+     * Status : 1
      * Message : Your details are Successfully uploaded
      */
 
-    private int status;
+    private int Status;
     private String Message;
 
     public int getStatus() {
-        return status;
+        return Status;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setStatus(int Status) {
+        this.Status = Status;
     }
 
     public String getMessage() {

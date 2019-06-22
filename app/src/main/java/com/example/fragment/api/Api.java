@@ -23,13 +23,13 @@ import com.example.fragment.Model.LoginResponse;
 import com.example.fragment.Model.TotalPriceREsponse;
 import com.example.fragment.Model.UpdatePasswordResponse;
 
-
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+
 
 public interface Api {
 
@@ -138,7 +138,8 @@ public interface Api {
             @Field("text") String name,
             @Field("price") String price,
             @Field("email") String email,
-            @Field("UserId") String UserId
+            @Field("UserId") String UserId,
+            @Field("time") String time
 
     );
 

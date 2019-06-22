@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL="http://192.168.0.135/sam1/ApiAll/";
+    private static final String BASE_URL="http://192.168.0.125/sam1/ApiAll/";
     private static RetrofitClient mInstance;
     private Retrofit retrofit;
 
@@ -28,6 +28,7 @@ public class RetrofitClient {
 
         retrofit= new Retrofit.Builder()
                 .baseUrl(BASE_URL)
+
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

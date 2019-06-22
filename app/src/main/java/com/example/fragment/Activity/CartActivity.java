@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,8 +25,12 @@ import com.example.fragment.R;
 import com.example.fragment.SharedPreferences.UserSessionManager;
 import com.example.fragment.api.RetrofitClient;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+//import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,7 +39,7 @@ import retrofit2.Response;
 public class CartActivity extends AppCompatActivity {
 
 
-
+    Handler mHandler;
     ImageView img,txthome;
     String emails,UserId,id,text,price;
   TextView txt1,totalprice;
@@ -44,11 +50,15 @@ public class CartActivity extends AppCompatActivity {
 
 
 
-//    String price;
+    private final Handler handler = new Handler();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+
+
 
         txt1=(TextView)findViewById(R.id.price);
         totalprice=(TextView)findViewById(R.id.ttlprc);
@@ -96,14 +106,10 @@ public class CartActivity extends AppCompatActivity {
     @Override
     public void onClick(View v) {
 
-
-//        String nmh=totalprice.getText().toString().trim();
-//        Intent intent = new Intent(CartActivity.this,PaymentActivity.class);
-//        intent.putExtra("price", nmh);
-//        startActivity(intent);
-
-
-        Call<FinalFoodCartHistoryResponse> Call= RetrofitClient.getInstance().getApi().Finalfoodcart(id,text,price,emails,UserId);
+        Date date = Calendar.getInstance().getTime();
+        String sdate = String.valueOf(date);
+        Log.e("time", sdate);
+        Call<FinalFoodCartHistoryResponse> Call= RetrofitClient.getInstance().getApi().Finalfoodcart(id,text,price,emails,UserId,sdate);
 
         Call.enqueue(new Callback<FinalFoodCartHistoryResponse>() {
             @Override
@@ -113,7 +119,7 @@ public class CartActivity extends AppCompatActivity {
 
                 if ((finalFoodCartHistoryResponse != null ? finalFoodCartHistoryResponse.getStatus() : 0) == 1) {
                     String im = finalFoodCartHistoryResponse.getMessage();
-                    Toast.makeText(CartActivity.this,"Success" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CartActivity.this,response.body().getMessage() , Toast.LENGTH_SHORT).show();
                 } else if ((finalFoodCartHistoryResponse != null ? finalFoodCartHistoryResponse.getStatus() : 0) == 0) {
                     String im = finalFoodCartHistoryResponse.getMessage();
                     Toast.makeText(CartActivity.this, " " + im, Toast.LENGTH_SHORT).show();
@@ -136,7 +142,6 @@ public class CartActivity extends AppCompatActivity {
 
     }
 });
-
 
 
     }
@@ -197,15 +202,18 @@ public class CartActivity extends AppCompatActivity {
 
 
 
-                        for (TotalPriceREsponse.DataBean mn : dataBean) {
+
+                    for (TotalPriceREsponse.DataBean mn : dataBean) {
+
+
+
 
                              totalprice.setText(mn.getPrice());
 
 
-
                         }
 
-
+                    foodcart1();
 
 
                 }
@@ -214,15 +222,14 @@ public class CartActivity extends AppCompatActivity {
                     String im = countandpriceResponse.getMessage();
                 }
 
-
-
             }
 
             @Override
             public void onFailure(retrofit2.Call<TotalPriceREsponse> call, Throwable t) {
 
             }
-        });}
+        });
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -232,6 +239,7 @@ public class CartActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+
     }
 
 
